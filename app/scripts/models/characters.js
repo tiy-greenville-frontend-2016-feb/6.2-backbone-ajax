@@ -1,6 +1,11 @@
 var Backbone = require('backbone');
 
 var Character = Backbone.Model.extend({
+  defaults: {
+    minAttack: 0,
+    maxAttack: 20,
+    health: 100
+  },
   injury: function(){
     this.set("health", this.get("health") - 10);
   },
